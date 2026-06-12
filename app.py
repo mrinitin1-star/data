@@ -10,6 +10,7 @@ st.set_page_config(
 
 # Load data
 df = pd.read_excel("Till date.xlsx")
+st.write(df.columns)
 
 # Dashboard title
 st.title("📈 Nifty Valuation Dashboard")
