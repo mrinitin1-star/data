@@ -23,7 +23,8 @@ col1,col2,col3,col4 = st.columns(4)
 col1.metric("Nifty 50", round(latest["Nifty 50"],2))
 col2.metric("Nifty PE", round(latest["Nifty PE"],2))
 col3.metric("Nifty PB", round(latest["Nifty PB"],2))
-col4.metric("10yr Yield", 0)
+col4.metric("Buffett Indicator",
+            round(latest["Buffett Indicator"],2))
 
 
 # Charts
