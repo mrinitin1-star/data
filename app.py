@@ -10,7 +10,7 @@ st.set_page_config(
 
 # Load data
 df = pd.read_excel("Till date.xlsx")
-st.write(df.columns)
+st.write(df.columns.tolist())
 
 # Dashboard title
 st.title("📈 Nifty Valuation Dashboard")
@@ -23,7 +23,8 @@ col1,col2,col3,col4 = st.columns(4)
 col1.metric("Nifty 50", round(latest["Nifty 50"],2))
 col2.metric("Nifty PE", round(latest["Nifty PE"],2))
 col3.metric("Nifty PB", round(latest["Nifty PB"],2))
-col4.metric("10yr Yield", round(latest["10yr Yield"],4))
+col4.metric("10yr Yield", 0)
+
 
 # Charts
 left,right = st.columns(2)
